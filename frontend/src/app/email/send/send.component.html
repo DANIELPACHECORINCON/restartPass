@@ -1,0 +1,40 @@
+<div class="form">
+    <mat-card class="card">
+      <mat-card-title> Send Email </mat-card-title>
+      <mat-card-content>
+        <div class="container">
+          <mat-form-field>
+            <input
+              [(ngModel)]="content.email"
+              matInput
+              autofocus
+              placeholder="Destinatario"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <input
+              [(ngModel)]="content.subject"
+              matInput
+              placeholder="Asunto"
+              required
+            />
+          </mat-form-field>
+          <mat-form-field>
+            <textarea
+              [(ngModel)]="content.message"
+              matInput
+              placeholder="Contenido del mensaje"
+              required
+            ></textarea>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="sendEmail()" class="button" mat-raised-button>
+          Enviar
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
